@@ -1,0 +1,15 @@
+<div class="container-fluid d-flex flex-row flex-wrap">
+  <!-- <div class="row">
+    <div class="col-sm-12 col-md-12"> -->
+  <aside class="filter-container p-2" *ngIf="is_show_slider" @easeInOut>
+    <app-filter [formDataInput]="queryParams"></app-filter>
+  </aside>
+  <main class="hero-tb-container p-2">
+    <app-hero-table
+      [formDataInput]="queryParams"
+      (sliderValChanged)="toggleSlider_changed($event)"
+    ></app-hero-table>
+    <!-- </div>
+    </div> -->
+  </main>
+</div>
