@@ -1,6 +1,6 @@
 import { HeroInterface } from './../../../../core/models/hero.interface';
-import { HeroService } from './../../../../services/hero.service';
 import { Component, OnInit, OnDestroy, OnChanges, SimpleChanges, Input, Output, EventEmitter } from '@angular/core';
+import { HeroService } from '../../services/hero.service';
 
 @Component({
   selector: 'app-hero-table',
