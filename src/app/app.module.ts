@@ -20,7 +20,7 @@ import { CustomSerializer } from './core/store/custom-serializer';
 @NgModule({
   declarations: [
     AppComponent,
-    LoaderComponent
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,

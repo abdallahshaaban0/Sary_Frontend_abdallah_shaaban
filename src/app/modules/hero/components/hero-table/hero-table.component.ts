@@ -14,20 +14,24 @@ export class HeroTableComponent implements OnInit, OnChanges {
 
   toggleSliderVal!: any;
   heroList: HeroInterface[] = [];
+  sortOrder: number = 1;
 
   constructor(private _heroService: HeroService) { }
 
   ngOnInit(): void {
     // this.getHeroList(this.formDataInput);
   }
+
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes.formDataInput.currentValue);
     this.getHeroList(changes.formDataInput.currentValue);
   }
+
   toggleSlider() {
     this.toggleSliderVal = !this.toggleSliderVal;
     this.sliderValChanged.emit(this.toggleSliderVal);
   }
+
   getHeroList(changesObj: {}) {
     this._heroService.getHeroList(changesObj).subscribe((result: any) => {
       this.heroList = result;

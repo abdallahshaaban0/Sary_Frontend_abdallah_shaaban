@@ -10,7 +10,17 @@
     <table class="table">
       <thead class="">
         <tr>
-          <td width="20%">Name</td>
+          <td
+            width="20%"
+            [appSort]="heroList"
+            data-order="desc"
+            data-name="user_name"
+            scope="col"
+            class="name"
+          >
+            Name
+            <i class="fas fa-sort"></i>
+          </td>
           <td scope="col">Phone</td>
           <td scope="col">Email</td>
           <td scope="col">Date</td>

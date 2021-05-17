@@ -1,3 +1,4 @@
+import { SortDirective } from './../../core/directive/sort.directive';
 import { CountryListService } from './../../core/services/country-list.service';
 import { SharedBootstrapModule } from './../../core/modules/bootstrap/shared.bootstrap.module';
 import { Routes, RouterModule } from '@angular/router';
@@ -18,7 +19,7 @@ const routes: Routes = [{
     HeroComponent,
     FilterComponent,
     HeroTableComponent,
-
+    SortDirective
   ],
   imports: [
     CommonModule,

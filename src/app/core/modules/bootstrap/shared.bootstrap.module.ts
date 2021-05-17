@@ -19,7 +19,8 @@ import { CommonModule } from '@angular/common';
     AccordionModule,
     TypeaheadModule,
     BsDatepickerModule,
-    ChangeBGDirective
+    ChangeBGDirective,
+
   ]
 })
 export class SharedBootstrapModule { }
