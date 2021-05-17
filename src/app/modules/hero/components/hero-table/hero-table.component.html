@@ -1,0 +1,39 @@
+<section>
+  <header class="header-container d-flex">
+    <h5 class="header-title">Heros</h5>
+    <!-- <input type="search"/> -->
+    <div class="toggle-icon-container" (click)="toggleSlider()">
+      <i class="fas fa-sliders-h"></i>
+    </div>
+  </header>
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="">
+        <tr>
+          <td width="20%">Name</td>
+          <td scope="col">Phone</td>
+          <td scope="col">Email</td>
+          <td scope="col">Date</td>
+          <td scope="col">Country</td>
+          <td scope="col">Company</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hero of heroList">
+          <td>{{ hero.user_name }}</td>
+          <td>{{ hero.user_phone }}</td>
+          <td>{{ hero.email }}</td>
+          <td>{{ hero.date }}</td>
+          <td>{{ hero.country }}</td>
+          <td>{{ hero.company }}</td>
+        </tr>
+        <!-- <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr> -->
+      </tbody>
+    </table>
+  </div>
+</section>

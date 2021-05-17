@@ -1,0 +1,120 @@
+<accordion [isAnimated]="true">
+  <accordion-group [isOpen]="true" heading="FILTERS">
+    <form [formGroup]="filterForm" (ngSubmit)="filterFn()">
+      <div class="form-field">
+        <div class="form-field__control">
+          <input
+            id="email"
+            type="text"
+            name="email"
+            changeBG
+            formControlName="email"
+            class="form-field__input"
+            placeholder="email as: john.doe@example.com"
+          />
+          <!-- <label for="email" class="form-field__label">email</label> -->
+          <div class="form-field__bar"></div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <div class="form-field__control">
+          <input
+            id="user_phone"
+            type="tel"
+            name="user_phone"
+            formControlName="user_phone"
+            class="form-field__input"
+            placeholder="phone number as: (222) 555-0000"
+          />
+          <!-- <label for="user_phone" class="form-field__label">Phone</label> -->
+          <div class="form-field__bar"></div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <div class="form-field__control">
+          <input
+            id="user_name"
+            type="text"
+            name="user_name"
+            formControlName="user_name"
+            class="form-field__input"
+            placeholder="user name"
+          />
+          <!-- <label for="user_name" class="form-field__label">user_name</label> -->
+          <div class="form-field__bar"></div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <div class="form-field__control">
+          <input
+            id="company"
+            type="text"
+            name="company"
+            formControlName="company"
+            class="form-field__input"
+            placeholder="company name"
+          />
+          <!-- <label for="company" class="form-field__label">company</label> -->
+          <div class="form-field__bar"></div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <div class="form-field__control">
+          <div>
+            <input
+              id="country"
+              type="text"
+              name="country"
+              [typeahead]="countryList"
+              formControlName="country"
+              typeaheadOptionField="Name"
+              (typeaheadOnSelect)="onSelectCountry($event)"
+              (typeaheadNoResults)="typeaheadNoResults($event)"
+              [typeaheadScrollable]="true"
+              [typeaheadHideResultsOnBlur]="false"
+              class="form-field__input"
+              placeholder=""
+              autocomplete="off"
+            />
+            <span class="country_icon"></span>
+            <!-- <i class="fa fa-caret-down country_icon" aria-hidden="true"></i> -->
+
+            <label for="country" class="form-field__label">country</label>
+            <div class="form-field__bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <div class="form-field__control">
+          <div>
+            <input
+              id="date"
+              type="text"
+              name="date"
+              formControlName="date"
+              class="form-field__input"
+              placeholder="Date"
+              bsDatepicker
+              [bsConfig]="{ isAnimated: true, containerClass: 'theme-blue' }"
+            />
+            <span class="date_icon"></span>
+          </div>
+          <label for="date" class="form-field__label">Date</label>
+          <div class="form-field__bar"></div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="submit-btn" [disabled]="filterForm.invalid">
+          <i class="fas fa-sort-amount-down"></i>
+          Filter
+        </button>
+      </div>
+    </form>
+  </accordion-group>
+</accordion>

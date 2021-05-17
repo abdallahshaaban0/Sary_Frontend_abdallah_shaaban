@@ -1,0 +1,39 @@
+@import "./../../../../../theme-variables.scss";
+section {
+  .header-container {
+    background: #fff;
+    justify-content: space-between;
+    align-items: center;
+    .header-title {
+      letter-spacing: 1pt;
+      border-right: 2px solid #f2f3f5;
+      padding: 12px;
+      padding-right: 3rem;
+      margin: 0.05rem;
+    }
+    .toggle-icon-container {
+      margin: 0 1rem;
+    }
+  }
+  table {
+    // background: #fff;
+    padding: 1px;
+    thead {
+      // background: $primary-color;
+      color: #bfbfbf;
+      td:not(:last-child) {
+        border-right: 1px solid #e2e2e2;
+      }
+      font-weight: 500;
+    }
+    tbody {
+      background-color: #fff;
+      td {
+        border-width: 0 0 1px 0;
+        border-color: #dee2e6;
+        border-style: solid;
+        font-size: .75rem;
+      }
+    }
+  }
+}

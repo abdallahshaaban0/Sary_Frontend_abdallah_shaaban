@@ -1,0 +1,65 @@
+@mixin icon() {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+}
+.card-header {
+  background-color: #fff;
+  .accordion-toggle {
+    text-align: center;
+    button {
+      font-size: 2.5rem;
+      color: #000;
+      letter-spacing: 2pt;
+      font-weight: 900;
+      &:hover,
+      &:active {
+        text-decoration: none;
+      }
+      &::after {
+        // if you would like to put icon like arrow-up/down
+      }
+    }
+  }
+}
+.dropdown-menu {
+  width: 100%;
+  min-width: 100%;
+  transform: none !important;
+  position: relative !important;
+}
+.country_icon::before {
+  @include icon();
+  content: "\f0d7";
+}
+.date_icon::before {
+  @include icon();
+  right: 30px;
+  content: "|";
+}
+.date_icon::after {
+  @include icon();
+  content: "\f073";
+}
+.bs-datepicker-container {
+  padding: unset;
+}
+.card-header {
+  border-bottom-width: 2px;
+}
+.submit-btn {
+  background-color: #0b80ff;
+  color: #fff;
+  padding: 7px 30px;
+  border-radius: 5px;
+  margin: 20px 0 2px 0;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  i {
+    padding: 0 5px;
+  }
+}
